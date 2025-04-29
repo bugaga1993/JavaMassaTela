@@ -1,8 +1,12 @@
-public class BmiService {
+public class Main {
 
-    public int calculate(double weight, double height) {
-        double bmi = weight / Math.pow(height, 2);
-        bmi = (double) ((int) (bmi * 100)) / 100;
-        return (int) bmi;
+    public static void main(String[] args) {
+        BmiService service = new BmiService();
+
+        double height = 1.87; //Рост
+        int weight = 98; //Вес
+
+        double index = (int) (service.calculate(height, weight));
+        System.out.println("Масса тела = " + Math.round(index));
     }
 }
